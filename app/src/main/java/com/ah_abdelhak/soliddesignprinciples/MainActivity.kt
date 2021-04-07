@@ -3,6 +3,9 @@ package com.ah_abdelhak.soliddesignprinciples
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.ah_abdelhak.soliddesignprinciples.ISP.IFax
+import com.ah_abdelhak.soliddesignprinciples.ISP.IPrinter
+import com.ah_abdelhak.soliddesignprinciples.ISP.IScanner
 import com.ah_abdelhak.soliddesignprinciples.LSP.BirdCanFly
 import com.ah_abdelhak.soliddesignprinciples.OpenClosed.Mercedes
 import com.ah_abdelhak.soliddesignprinciples.SRP.EmailValidation
@@ -10,7 +13,7 @@ import com.ah_abdelhak.soliddesignprinciples.SRP.EmailValidation
 /*
 * Show Implementation of S.O.L.I.D Design Principles
 * */
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() , IPrinter, IFax, IScanner{
     val TAG = javaClass.simpleName
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,4 +52,17 @@ class MainActivity : AppCompatActivity() {
         Log.e(TAG,"OpenClosed_getBrand() -> Brand Is: " + mBirdFly?.fly())
     }
 
+    /*
+    *3 separated overridden function to show ISP Principle Implementation
+    * ISP >> If an interface grows too big with mixed functionality, it makes sense to segregate it into multiple smaller interfaces.
+    * */
+    override fun Print() {
+        Log.e(TAG,"ISP_Print() -> Printing: ")
+    }
+    override fun Fax() {
+        Log.e(TAG,"ISP_Fax() -> Fax: ")
+    }
+    override fun Scan() {
+        Log.e(TAG,"ISP_Scan() -> Scanning: ")
+    }
 }
