@@ -41,7 +41,9 @@ class MainActivity : AppCompatActivity() , IPrinter, IFax, IScanner{
 
         /*5
        *Function referring to JobTrackingCondition that show DIP Principle
-       * DIP >> High-level modules should not depend on low-level modules. Both should depend on abstractions.
+       * DIP >> higher level modules in a program must not be tightly coupled with the lower-level modules.
+       *        Both modules must depend on abstractions. This principle provides a mechanism to build loosely coupled software modules.
+       * High-level modules should not depend on low-level modules. Both should depend on abstractions.
        *Abstractions should not depend upon details. Details should depend upon abstractions.
        * */
         getJobTrackingCondition()
