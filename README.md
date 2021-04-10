@@ -1,5 +1,4 @@
 # SolidDesignPrinciplesImplementation
-Implementation of S.O.L.I.D Design Principles
 
 * Single Responsibility Principle: This means that one class should only have one responsibility.
 * Open/Closed Principle: Software entities such as classes, functions, modules should be open for extension but not modification.
